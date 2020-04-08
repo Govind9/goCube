@@ -1,0 +1,14 @@
+.idea/
+*~
+.DS_Store
+build/
+_static/
+_templates/
+__pycache__
+.ipynb_checkpoints/
+*.ipynb
+*.pyd
+*.c
+/dist/
+/*.egg-info
+/*.egg
