@@ -56,7 +56,8 @@ def gen_move(move):
     for i in range(3):
         layer_cycles.append([config[move[0]]["layer"][n] for n in range(i, i + 11, 3)])
     
-    code = f"def {move} ({obj_name}):\n{tab}"
+    code = f"cpdef Cube {move} (Cube {obj_name}):\n{tab}"
+    code += f"cdef int temp\n{tab}"
     if move[1:] == "":
         code += cycle_through(side_cycles[0][::-1])
         code += cycle_through(side_cycles[1][::-1])
@@ -84,7 +85,7 @@ def gen_code():
         code += gen_move(move)
         code += gen_move(move+"i")
         code += gen_move(move+"2")
-    with open("haha.py", "w") as file:
+    with open("temp.py", "w") as file:
         file.write(code)
 
 gen_code()

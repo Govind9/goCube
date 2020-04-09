@@ -1,4 +1,5 @@
-def R (cube):
+cpdef Cube R (Cube cube):
+    cdef int temp
     temp = cube.pos[38]
     cube.pos[38] = cube.pos[36]
     cube.pos[36] = cube.pos[34]
@@ -31,7 +32,8 @@ def R (cube):
     
     return cube
 
-def Ri (cube):
+cpdef Cube Ri (Cube cube):
+    cdef int temp
     temp = cube.pos[32]
     cube.pos[32] = cube.pos[34]
     cube.pos[34] = cube.pos[36]
@@ -64,7 +66,8 @@ def Ri (cube):
     
     return cube
 
-def R2 (cube):
+cpdef Cube R2 (Cube cube):
+    cdef int temp
     temp = cube.pos[32]
     cube.pos[32] = cube.pos[36]
     cube.pos[36] = temp
@@ -102,7 +105,8 @@ def R2 (cube):
     
     return cube
 
-def U (cube):
+cpdef Cube U (Cube cube):
+    cdef int temp
     temp = cube.pos[6]
     cube.pos[6] = cube.pos[4]
     cube.pos[4] = cube.pos[2]
@@ -135,7 +139,8 @@ def U (cube):
     
     return cube
 
-def Ui (cube):
+cpdef Cube Ui (Cube cube):
+    cdef int temp
     temp = cube.pos[0]
     cube.pos[0] = cube.pos[2]
     cube.pos[2] = cube.pos[4]
@@ -168,7 +173,8 @@ def Ui (cube):
     
     return cube
 
-def U2 (cube):
+cpdef Cube U2 (Cube cube):
+    cdef int temp
     temp = cube.pos[0]
     cube.pos[0] = cube.pos[4]
     cube.pos[4] = temp
@@ -206,7 +212,8 @@ def U2 (cube):
     
     return cube
 
-def F (cube):
+cpdef Cube F (Cube cube):
+    cdef int temp
     temp = cube.pos[14]
     cube.pos[14] = cube.pos[12]
     cube.pos[12] = cube.pos[10]
@@ -239,7 +246,8 @@ def F (cube):
     
     return cube
 
-def Fi (cube):
+cpdef Cube Fi (Cube cube):
+    cdef int temp
     temp = cube.pos[8]
     cube.pos[8] = cube.pos[10]
     cube.pos[10] = cube.pos[12]
@@ -272,7 +280,8 @@ def Fi (cube):
     
     return cube
 
-def F2 (cube):
+cpdef Cube F2 (Cube cube):
+    cdef int temp
     temp = cube.pos[8]
     cube.pos[8] = cube.pos[12]
     cube.pos[12] = temp
@@ -310,7 +319,8 @@ def F2 (cube):
     
     return cube
 
-def L (cube):
+cpdef Cube L (Cube cube):
+    cdef int temp
     temp = cube.pos[46]
     cube.pos[46] = cube.pos[44]
     cube.pos[44] = cube.pos[42]
@@ -343,7 +353,8 @@ def L (cube):
     
     return cube
 
-def Li (cube):
+cpdef Cube Li (Cube cube):
+    cdef int temp
     temp = cube.pos[40]
     cube.pos[40] = cube.pos[42]
     cube.pos[42] = cube.pos[44]
@@ -376,7 +387,8 @@ def Li (cube):
     
     return cube
 
-def L2 (cube):
+cpdef Cube L2 (Cube cube):
+    cdef int temp
     temp = cube.pos[40]
     cube.pos[40] = cube.pos[44]
     cube.pos[44] = temp
@@ -414,7 +426,8 @@ def L2 (cube):
     
     return cube
 
-def D (cube):
+cpdef Cube D (Cube cube):
+    cdef int temp
     temp = cube.pos[22]
     cube.pos[22] = cube.pos[20]
     cube.pos[20] = cube.pos[18]
@@ -447,7 +460,8 @@ def D (cube):
     
     return cube
 
-def Di (cube):
+cpdef Cube Di (Cube cube):
+    cdef int temp
     temp = cube.pos[16]
     cube.pos[16] = cube.pos[18]
     cube.pos[18] = cube.pos[20]
@@ -480,7 +494,8 @@ def Di (cube):
     
     return cube
 
-def D2 (cube):
+cpdef Cube D2 (Cube cube):
+    cdef int temp
     temp = cube.pos[16]
     cube.pos[16] = cube.pos[20]
     cube.pos[20] = temp
@@ -518,7 +533,8 @@ def D2 (cube):
     
     return cube
 
-def B (cube):
+cpdef Cube B (Cube cube):
+    cdef int temp
     temp = cube.pos[30]
     cube.pos[30] = cube.pos[28]
     cube.pos[28] = cube.pos[26]
@@ -551,7 +567,8 @@ def B (cube):
     
     return cube
 
-def Bi (cube):
+cpdef Cube Bi (Cube cube):
+    cdef int temp
     temp = cube.pos[24]
     cube.pos[24] = cube.pos[26]
     cube.pos[26] = cube.pos[28]
@@ -584,7 +601,8 @@ def Bi (cube):
     
     return cube
 
-def B2 (cube):
+cpdef Cube B2 (Cube cube):
+    cdef int temp
     temp = cube.pos[24]
     cube.pos[24] = cube.pos[28]
     cube.pos[28] = temp
