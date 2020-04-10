@@ -32,18 +32,49 @@ config = {
 
 def cycle_through(cycle, swap=False):
     if swap:
-        code = f"temp = {ref_syn}[{cycle[0]}]\n{tab}"
-        code += f"{ref_syn}[{cycle[0]}] = {ref_syn}[{cycle[2]}]\n{tab}"
-        code += f"{ref_syn}[{cycle[2]}] = temp\n{tab}"
-        code += f"temp = {ref_syn}[{cycle[1]}]\n{tab}"
-        code += f"{ref_syn}[{cycle[1]}] = {ref_syn}[{cycle[3]}]\n{tab}"
-        code += f"{ref_syn}[{cycle[3]}] = temp\n{tab}\n{tab}"
+        code  = f"temp.set(0, {ref_syn}[{cycle[0]*3+0}]);\n{tab}"
+        code += f"temp.set(1, {ref_syn}[{cycle[0]*3+1}]);\n{tab}"
+        code += f"temp.set(2, {ref_syn}[{cycle[0]*3+2}]);\n{tab}"
+        
+        code += f"{ref_syn}.set({cycle[0]*3+0}, cube.pos[{cycle[2]*3+0}]);\n{tab}"
+        code += f"{ref_syn}.set({cycle[0]*3+1}, cube.pos[{cycle[2]*3+1}]);\n{tab}"
+        code += f"{ref_syn}.set({cycle[0]*3+2}, cube.pos[{cycle[2]*3+2}]);\n{tab}"
+
+        code += f"{ref_syn}.set({cycle[2]*3+0}, temp[0]);\n{tab}"
+        code += f"{ref_syn}.set({cycle[2]*3+1}, temp[1]);\n{tab}"
+        code += f"{ref_syn}.set({cycle[2]*3+2}, temp[2]);\n{tab}"
+
+        code += f"temp.set(0, {ref_syn}[{cycle[1]*3+0}]);\n{tab}"
+        code += f"temp.set(1, {ref_syn}[{cycle[1]*3+1}]);\n{tab}"
+        code += f"temp.set(2, {ref_syn}[{cycle[1]*3+2}]);\n{tab}"
+
+        code += f"{ref_syn}.set({cycle[1]*3+0}, cube.pos[{cycle[3]*3+0}]);\n{tab}"
+        code += f"{ref_syn}.set({cycle[1]*3+1}, cube.pos[{cycle[3]*3+1}]);\n{tab}"
+        code += f"{ref_syn}.set({cycle[1]*3+2}, cube.pos[{cycle[3]*3+2}]);\n{tab}"
+
+        code += f"{ref_syn}.set({cycle[3]*3+0}, temp[0]);\n{tab}"
+        code += f"{ref_syn}.set({cycle[3]*3+1}, temp[1]);\n{tab}"
+        code += f"{ref_syn}.set({cycle[3]*3+2}, temp[2]);\n{tab}\n{tab}"
     else:
-        code = f"temp = {ref_syn}[{cycle[0]}]\n{tab}"
-        code += f"{ref_syn}[{cycle[0]}] = {ref_syn}[{cycle[1]}]\n{tab}"
-        code += f"{ref_syn}[{cycle[1]}] = {ref_syn}[{cycle[2]}]\n{tab}"
-        code += f"{ref_syn}[{cycle[2]}] = {ref_syn}[{cycle[3]}]\n{tab}"
-        code += f"{ref_syn}[{cycle[3]}] = temp\n{tab}\n{tab}"
+        code  = f"temp.set(0, {ref_syn}[{cycle[0]*3+0}]);\n{tab}"
+        code += f"temp.set(1, {ref_syn}[{cycle[0]*3+1}]);\n{tab}"
+        code += f"temp.set(2, {ref_syn}[{cycle[0]*3+2}]);\n{tab}"
+
+        code += f"{ref_syn}.set({cycle[0]*3+0}, cube.pos[{cycle[1]*3+0}]);\n{tab}"
+        code += f"{ref_syn}.set({cycle[0]*3+1}, cube.pos[{cycle[1]*3+1}]);\n{tab}"
+        code += f"{ref_syn}.set({cycle[0]*3+2}, cube.pos[{cycle[1]*3+2}]);\n{tab}"
+
+        code += f"{ref_syn}.set({cycle[1]*3+0}, cube.pos[{cycle[2]*3+0}]);\n{tab}"
+        code += f"{ref_syn}.set({cycle[1]*3+1}, cube.pos[{cycle[2]*3+1}]);\n{tab}"
+        code += f"{ref_syn}.set({cycle[1]*3+2}, cube.pos[{cycle[2]*3+2}]);\n{tab}"
+
+        code += f"{ref_syn}.set({cycle[2]*3+0}, cube.pos[{cycle[3]*3+0}]);\n{tab}"
+        code += f"{ref_syn}.set({cycle[2]*3+1}, cube.pos[{cycle[3]*3+1}]);\n{tab}"
+        code += f"{ref_syn}.set({cycle[2]*3+2}, cube.pos[{cycle[3]*3+2}]);\n{tab}"
+
+        code += f"{ref_syn}.set({cycle[3]*3+0}, temp[0]);\n{tab}"
+        code += f"{ref_syn}.set({cycle[3]*3+1}, temp[1]);\n{tab}"
+        code += f"{ref_syn}.set({cycle[3]*3+2}, temp[2]);\n{tab}\n{tab}"
     return code
 
 def gen_move(move):
@@ -56,8 +87,8 @@ def gen_move(move):
     for i in range(3):
         layer_cycles.append([config[move[0]]["layer"][n] for n in range(i, i + 11, 3)])
     
-    code = f"cpdef Cube {move} (Cube {obj_name}):\n{tab}"
-    code += f"cdef int temp\n{tab}"
+    code = f"Cube {move} (Cube {obj_name})" + "{" + f"\n{tab}"
+    code += f"bitset<3> temp;\n{tab}"
     if move[1:] == "":
         code += cycle_through(side_cycles[0][::-1])
         code += cycle_through(side_cycles[1][::-1])
@@ -76,7 +107,7 @@ def gen_move(move):
         code += cycle_through(layer_cycles[0], swap=True)
         code += cycle_through(layer_cycles[1], swap=True)
         code += cycle_through(layer_cycles[2], swap=True)
-    code += f"return {obj_name}\n\n"
+    code += f"return {obj_name};" + "\n}\n\n"
     return code
 
 def gen_code():
