@@ -1,0 +1,19 @@
+There are different computational algorithms for solving the Rubik’s
+cube, such as Thistlewaite’s algorithm, Kociemba’s algorithm and IDA*
+search algorithm. This thesis evaluates the efficiency of two algorithms by
+analyzing time, performance and how many moves are required to solve the
+Rubik’s cube. The results show that the Thistlewaite’s algorithm is less
+efficient than the IDA* algorithm based on time and performance. The
+paper attempts to answer which algorithm are more efficient for solving
+the Rubik’s cube.It is important to mention that this report could not prove
+which algorithm is most efficient while solving the whole cube due to limited
+data, literature studies and authors are used as an argument to prove that
+the Korf’s algorithm is more efficient.
+
+There are several methods to tackle the Rubik's cube. Some of these methods are designed just for humans in order to solve the puzzle as intuitively as possible, while other methods are designed just for machines. These methods are as efficient as they can be (mathematically). This project intends to strike a balance between the two extremes. Combination of intelligent computer algorithms is used in the context of recognizable milestones that are prevalent in many human methods of solving the cube.
+
+43,252,003,274,489,856,000
+BFS, DFS
+IDA*
+Thistlethwaite’s
+Kociemba’s algorithm
