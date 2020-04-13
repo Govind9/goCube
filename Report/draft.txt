@@ -13,7 +13,28 @@ the Korf’s algorithm is more efficient.
 There are several methods to tackle the Rubik's cube. Some of these methods are designed just for humans in order to solve the puzzle as intuitively as possible, while other methods are designed just for machines. These methods are as efficient as they can be (mathematically). This project intends to strike a balance between the two extremes. Combination of intelligent computer algorithms is used in the context of recognizable milestones that are prevalent in many human methods of solving the cube.
 
 43,252,003,274,489,856,000
+18,476,969,736,848,122,368
+246,639,261,965,462,754,048
 BFS, DFS
 IDA*
 Thistlethwaite’s
 Kociemba’s algorithm
+
+Description of CFOP and ROUX. 
+state representation.
+The unique id for each state.
+Identification of each stage.
+heuristic used
+general procedure.
+advantages/disadvantages
+
+results
+1 example solve for each method.
+conclusions
+
+Advantages:
+    shorter problems.
+    Interpretable for humans.
+    Results can be used by cubers to improve their personal stratergies.
+Disadvantages:
+    Since no 

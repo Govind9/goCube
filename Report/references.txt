@@ -1,3 +1,7 @@
 stages of cfop: https://en.wikipedia.org/wiki/Layer_by_Layer
 roux vs cfop: https://www.youtube.com/watch?v=H0PMc8JQN7Y
 the node count at different depths: https://www.semanticscholar.org/paper/Finding-Optimal-Solutions-to-Rubik's-Cube-Using-Korf/e6ab7d5d5d38a659fd2ffa53d72ab67e6abc61af/figure/1
+cfop stages: https://en.wikipedia.org/wiki/CFOP_method
+roux stages: http://grrroux.free.fr/method/Intro.html
+color scheme image: ruwix.com
+God's number: https://cube20.org/
