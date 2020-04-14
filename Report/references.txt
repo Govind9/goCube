@@ -5,3 +5,54 @@ cfop stages: https://en.wikipedia.org/wiki/CFOP_method
 roux stages: http://grrroux.free.fr/method/Intro.html
 color scheme image: ruwix.com
 God's number: https://cube20.org/
+
+god cross is 8 nu v refer kro.
+heise and petrus nu refer kro.
+
+L2 D2 F L2 D2 U2 Fi D2 Li D2 B2 U B U2 F2 D Ri B2 F
+L2 D2 F L2 D2 U2 F' D2 L' D2 B2 U B U2 F2 D R' B2 F
+
+https://www.cstimer.net/
+
+Ri U R2 F2 L2 F2 Ui R2 F2 U B2 U R2 Li Di F D Li D2 Ui B2
+
+Li D L2 F2 R2 F2 Di L2 F2 D B2 D L2 Ri Ui F U Ri U2 Di B2
+LiDL2F2R2F2DiL2F2DB2DL2RiUiFURiU2DiB2
+
+z2
+cross U  Li B2 R  Fi
+F2 Ui F  U  F2
+U2 R  B2 Ri B2
+R2 U2 Ri U2 R2 
+U2 R  B  U2 Bi U2 Ri
+U2 r U Ri U R U2 ri
+Ui R2 u Ri U Ri Ui R ui R2 Fi U F
+
+
+Orientation: 
+x Ui R F U Bi 
+F2
+R
+R U Ri Ui r U Ri
+Yi R U2 Ri Ui R U Ri Ui R U Ri Ui R Ui Ri
+Y U2 Mi Ui M Ui M2 Ui M U2 M Ui E2 M E2 Mi
+
+
+Fi L U F D
+D Ri B2 L Fi
+
+cross is very advanced. F2l breaks up cross a lot.
+very advanced an unintuitive.
+average solvers take 6-10 moves for cross.
+
+a = [5, 5, 6, 7, 6, 5, 6, 5, 6, 6]: 5 7 5.7
+a = [4, 5, 4, 6, 5, 6, 5, 6, 6, 6]: 4 6 5.3
+a = [6, 7, 3, 5, 5, 7, 3, 4, 4, 6]: 3 7 5.0
+a = [4, 6, 6, 5, 7, 5, 7, 6, 4, 4]: 4 7 5.4
+a = [8, 7, 7, 7, 7, 8, 6, 7, 7, 7]: 7 8 7.1
+
+
+a = [3, 3, 5, 4, 3, 5, 4, 3, 5, 6]: 3 6 4.1
+a = [4, 3, 1, 3, 4, 2, 3, 4, 3, 1]: 1 4 2.8
+a = [3, 4, 5, 2, 4, 3, 6, 5, 1, 5]: 1 6 3.8                  
+a = [7, 4, 6, 8, 6, 6, 5, 4, 7, 5]: 4 8 5.8
